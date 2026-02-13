@@ -1,0 +1,66 @@
+name: rnaseq-pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  # Workflow management
+  - snakemake>=7.0
+  - python>=3.9
+  
+  # QC tools
+  - fastqc>=0.11.9
+  - multiqc>=1.14
+  - trimmomatic>=0.39
+  - fastp>=0.23.2
+  
+  # Alignment
+  - star>=2.7.10
+  - hisat2>=2.2.1
+  - samtools>=1.17
+  - sambamba>=1.0
+  
+  # Quantification
+  - subread>=2.0.3  # featureCounts
+  - salmon>=1.10.0
+  
+  # Python packages
+  - pandas>=2.0
+  - numpy>=1.24
+  - matplotlib>=3.7
+  - seaborn>=0.12
+  - scipy>=1.10
+  - scikit-learn>=1.2
+  - jupyter>=1.0
+  - jupyterlab>=4.0
+  - plotly>=5.14
+  
+  # R and Bioconductor
+  - r-base>=4.2
+  - r-tidyverse>=2.0
+  - r-ggplot2>=3.4
+  - r-pheatmap>=1.0
+  - r-rcolorbrewer>=1.1
+  - r-ggrepel>=0.9
+  - r-scales>=1.2
+  - r-gridextra>=2.3
+  - r-knitr>=1.42
+  - r-rmarkdown>=2.21
+  - r-dt>=0.27
+  - r-plotly>=4.10
+  - bioconductor-deseq2>=1.38
+  - bioconductor-edger>=3.40
+  - bioconductor-limma>=3.54
+  - bioconductor-enhancedvolcano>=1.16
+  - bioconductor-clusterprofiler>=4.6
+  - bioconductor-org.hs.eg.db>=3.16
+  - bioconductor-annotationdbi>=1.60
+  - bioconductor-biomart>=2.54
+  - bioconductor-complexheatmap>=2.14
+  - bioconductor-sva>=3.46
+  
+  # Utilities
+  - pigz>=2.6
+  - wget>=1.21
+  - curl>=8.0
